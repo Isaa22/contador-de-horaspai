@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Controle de Horas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Controle de Horas de Trabalho</h1>
+            <p class="description">Preencha seus horários de trabalho e descanso para acompanhar suas horas mensais</p>
+        </header>
+        
+        <div class="controls">
+            <div class="month-selector">
+                <label for="monthSelect">Mês:</label>
+                <select id="monthSelect">
+                    <option value="0">Janeiro</option>
+                    <option value="1">Fevereiro</option>
+                    <option value="2">Março</option>
+                    <option value="3">Abril</option>
+                    <option value="4">Maio</option>
+                    <option value="5">Junho</option>
+                    <option value="6">Julho</option>
+                    <option value="7">Agosto</option>
+                    <option value="8">Setembro</option>
+                    <option value="9">Outubro</option>
+                    <option value="10">Novembro</option>
+                    <option value="11">Dezembro</option>
+                </select>
+                <input type="number" id="yearInput" min="2020" max="2030" value="2023">
+            </div>
+            
+            <button id="calculateBtn">Calcular Totais</button>
+        </div>
+        
+        <div class="grid-container">
+            <table id="timesheet">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Data</th>
+                        <th>Entrada</th>
+                        <th>Saída Almoço</th>
+                        <th>Retorno Almoço</th>
+                        <th>Saída</th>
+                        <th>Horas Trabalhadas</th>
+                        <th>Horas Extras</th>
+                    </tr>
+                </thead>
+                <tbody id="timesheetBody">
+                    <!-- As linhas serão geradas pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="totals">
+            <div class="total-card">
+                <h3>Total Horas Trabalhadas</h3>
+                <p id="totalWorked">00:00</p>
+            </div>
+            <div class="total-card">
+                <h3>Total Horas Extras</h3>
+                <p id="totalOvertime">00:00</p>
+            </div>
+            <div class="total-card">
+                <h3>Total Horas Descanso</h3>
+                <p id="totalBreak">00:00</p>
+            </div>
+            <div class="total-card">
+                <h3>Dias Trabalhados</h3>
+                <p id="daysWorked">0</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
